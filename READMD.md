@@ -2,6 +2,29 @@
   - git clone https://github.com/MaJinjie/tmux.git ~/.config/
   - git clone git@github.com:MaJinjie/tmux.git ~/.config/
 
+## 快捷键
+  1. M-s new session 
+  2. M-w new windows
+  3. M-c close self pane 
+  4. M-o close other panes
+  5. M-q close self window
+  6. M-e close other windows 
+  7. M-b 分离窗格到一个单独的窗口
+  8. prefix + d 会话分离
+  9. prefix + r 重新加载配置文件
+  10. prefix + |    prefix + _
+  11. M-[0...9] 选择第k个窗口
+  12. C-[jkhl] 跳转窗格 
+  13. C-[up,down,left,right] 调整窗格大小
+  14. prefix + v 开启vi模式
+  15. M-space 切换布局
+
+## 命令
+
+  1. tmux attanch [-t <session>] 附加到指定的(最近的)会话
+  2. tmux kill-servers 杀死tmux后台服务进程
+
+
 # 2 插件说明
   1. tmux-plugins/tmux-resurrect
   2. tmux-plugins/tmux-continuum
@@ -33,9 +56,10 @@
 
 ### 支持 
   1. 该插件会优先于首次启动的tmux服务器来处理多服务器场景。也就是说，在启动第一台tmux服务器下，启动了第二台服务器，插件会优先处理第一台tmux服务器。
-  2. 
 
-
+### 快捷键
+  1. prefix + C-s save 
+  2. prefix + C-r restore
 ## 3 tmux-resurrect
 
 ### 介绍
@@ -48,4 +72,15 @@
 ### 支持
   1. 支持快捷键的重新绑定
   2. 支持一些钩子
-  3. 
+
+
+## 4 tmux-copycat
+  
+### 快捷键
+
+  1. prefix + C-f 文件搜索
+  2. prefix + / 正则搜索
+  3. prefix + C-u url搜索
+  4. prefix + C-a address搜索(ip)
+  5. prefix + C-d 数字搜索
+  6. n/N 下一个/上一个
