@@ -30,6 +30,9 @@
   2. tmux-plugins/tmux-continuum
   3. catppuccin/tmux
   4. aserowy/tmux.nvim
+  5. tmux-plugins/tpm
+
+
 ## 1 catppuccin
 一款tmux主题
 
@@ -84,3 +87,11 @@
   4. prefix + C-a address搜索(ip)
   5. prefix + C-d 数字搜索
   6. n/N 下一个/上一个
+
+## 5 tmux-plugins/tpm
+
+### 1 options
+  1. set-environment -g TMUX_PLUGIN_MANAGER_PATH '/some/other/path/' 设置插件的安装路径(优先安装在$XDG_CONFIG_HOME/tmux)
+  2. tpm自动安装 
+      if "test ! -d ~/.tmux/plugins/tpm" \
+        "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
