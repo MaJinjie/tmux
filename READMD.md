@@ -24,6 +24,15 @@
   1. tmux attanch [-t <session>] 附加到指定的(最近的)会话
   2. tmux kill-servers 杀死tmux后台服务进程
 
+## 配置
+  if <shell-command> "run '..'" 可以运行shell命令
+  if-shell <shell-command> {
+    run-shell -C "run '...'"
+  } 同上
+  
+  set-environment -g 在tmux终端生效，配置文件中不生效
+  set-option(set) -g 在tmux配置中生效
+
 
 # 2 插件说明
   1. tmux-plugins/tmux-resurrect
@@ -95,3 +104,21 @@
   2. tpm自动安装 
       if "test ! -d ~/.tmux/plugins/tpm" \
         "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+## 6 tmux-plugins/tmux-cowboy
+
+### keys
+  1. prefix + * 杀死当前窗格正在运行的进程，向进程发送 -9 信号
+
+## 7 tmux-power-zoom 
+### options
+  @power_zoom_trigger
+  @power_zoom_without_prefix
+
+### 快捷键
+  1. prefix + Z 将窗格在新的窗口中打开，在原来窗格占位
+  2. prefix + z(tmux默认的) 将窗格在旧窗口中打开
+# 其他
+
+  1. pstree 进程树
+  2. CopyQ 一款剪切版管理器
